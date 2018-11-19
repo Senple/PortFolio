@@ -8,9 +8,29 @@
    <script src="drop_semple.js"></script>
   </head>
 <body>
-    <h1>Semple</h1>
-    <script type="text/javascript">
-    $( 'h1' ).letterDrop();
-    </script>
+  <!-- 初めのSempleをロードさせる -->
+  <!-- <div id="loader-bg" style="display: None;"> -->
+    <div id="loader" style="display: block;">
+        <h2 class="sample">Sample</h2>
+        <h1>Semple</h1>
+        <h2 class="simple">Simple</h2>
+        <script type="text/javascript">
+        $( 'h1' ).letterDrop();
+        $(function(){
+        $("h2").css({opacity:'0'});
+        setTimeout(function(){
+            $("h2").stop().animate({opacity:'1'},1000);
+            $( 'h2.sample' ).letterDrop();
+            $( 'h2.simple' ).letterDrop();
+          },3000);
+        });
+          </script>
+      </div>
+    </div>
+<!-- メインコンテンツをロードさせる -->
+  <!-- <div class="loadcontent" style="display:block; opacity: 1;"> -->
+    <!-- <p>HEllo World</p> -->
+
+  </div>
  </body>
 </html>
